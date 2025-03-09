@@ -1,0 +1,31 @@
+{
+  "name": "@numerbay/numerbay-api",
+  "version": "2.3.0",
+  "private": true,
+  "sideEffects": false,
+  "server": "server/index.js",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.es.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "rimraf lib server && rollup -c",
+    "dev": "rollup -c -w",
+    "test": "jest",
+    "prepublish": "yarn build"
+  },
+  "dependencies": {
+    "axios": "^0.21.2"
+  },
+  "files": [
+    "lib/**/*"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.1",
+    "rollup": "^4.34.9",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "typescript": "^5.8.2"
+  }
+}
