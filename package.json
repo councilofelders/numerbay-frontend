@@ -10,6 +10,7 @@
     "build:api-client": "cd packages/api-client && yarn build",
     "build:composables": "cd packages/composables && yarn build",
     "build:theme": "cd packages/theme && yarn build",
+    "vercel-build": "yarn build:api-client && yarn build:composables && yarn build:theme",
     "dev": "concurrently \"yarn:dev:*\"",
     "dev:api-client": "cd packages/api-client && yarn dev",
     "dev:composables": "cd packages/composables && yarn dev",

@@ -2,27 +2,28 @@
   "version": 2,
   "builds": [
     {
-      "src": "packages/theme/nuxt.config.js",
-      "use": "@nuxtjs/vercel-builder",
+      "src": "packages/api-client/package.json",
+      "use": "@vercel/node",
       "config": {
-        "serverFiles": ["packages/theme/server-middleware/**"],
-        "buildCommand": "../../vercel-build.sh",
-        "generateStaticRoutes": true,
-        "tscOptions": {
-          "sourceMap": false
-        }
+        "buildCommand": "yarn build"
+      }
+    },
+    {
+      "src": "packages/composables/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "yarn build"
+      }
+    },
+    {
+      "src": "packages/theme/package.json",
+      "use": "@vercel/node",
+      "config": {
+        "buildCommand": "yarn build"
       }
     }
   ],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "packages/theme/$1"
-    }
-  ],
-  "build": {
-    "env": {
-      "NODE_OPTIONS": "--openssl-legacy-provider --no-deprecation"
-    }
-  }
+    { "src": "/(.*)", "dest": "packages/theme/$1" }
+  ]
 } 
