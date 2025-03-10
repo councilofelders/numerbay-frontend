@@ -1,0 +1,28 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "packages/theme/nuxt.config.js",
+      "use": "@nuxtjs/vercel-builder",
+      "config": {
+        "serverFiles": ["packages/theme/server-middleware/**"],
+        "buildCommand": "../../vercel-build.sh",
+        "generateStaticRoutes": true,
+        "tscOptions": {
+          "sourceMap": false
+        }
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "packages/theme/$1"
+    }
+  ],
+  "build": {
+    "env": {
+      "NODE_OPTIONS": "--openssl-legacy-provider --no-deprecation"
+    }
+  }
+} 
