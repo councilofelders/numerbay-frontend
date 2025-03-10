@@ -7,6 +7,8 @@ export const useVueRouter = () => {
   const state = reactive<{ route: Route }>({ route: vm.$route });
 
   const defineRoute = (r: Route) => {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     state.route = r;
   };
 

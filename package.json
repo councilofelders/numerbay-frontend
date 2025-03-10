@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
+    "@babel/plugin-proposal-private-property-in-object": "7.16.7",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
     "@typescript-eslint/eslint-plugin": "^4.4.0",
@@ -60,8 +61,28 @@
   "lint-staged": {
     "*.{js,ts,vue}": "eslint --fix"
   },
-  "packageManager": "yarn@3.3.1",
+  "packageManager": "yarn@1.22.19",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "postcss": "7.0.39",
+    "postcss-custom-properties": "9.2.0",
+    "postcss-loader": "3.0.0",
+    "sass": "1.32.13",
+    "sass-loader": "10.1.1"
+  },
+  "resolutions": {
+    "**/sanitize-html": "2.7.0",
+    "**/**/sanitize-html": "2.7.0",
+    "sanitize-html": "2.7.0",
+    "v-sanitize/sanitize-html": "2.7.0",
+    "vue": "2.6.14",
+    "vue-server-renderer": "2.6.14",
+    "vue-template-compiler": "2.6.14",
+    "@babel/core": "7.17.5",
+    "@nuxtjs/style-resources": "1.2.1",
+    "sass-loader": "10.5.2",
+    "@vue/composition-api": "1.0.0-beta.21",
+    "@nuxtjs/composition-api": "0.17.0",
+    "vue-router": "3.5.3"
   }
 }
