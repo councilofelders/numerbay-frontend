@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "NODE_OPTIONS='--openssl-legacy-provider --no-deprecation' SASS_SILENCE_DEPRECATION_WARNINGS=true SASS_SUPPRESS_WARNINGS=true SASS_QUIET=true nuxt",
-    "build": "nuxt build -m",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider --no-deprecation' SASS_SILENCE_DEPRECATION_WARNINGS=true SASS_SUPPRESS_WARNINGS=true SASS_QUIET=true nuxt build -m",
     "build:analyze": "nuxt build -a -m",
     "start": "nuxt start",
     "generate": "nuxt generate",
